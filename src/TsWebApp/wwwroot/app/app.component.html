@@ -1,7 +1,16 @@
 ﻿<div class="mdl-layout mdl-js-layout">
+
     <app-nav></app-nav>
-    <main class="mdl-layout__content">
+    <!--<main>
         <router-outlet></router-outlet>
+    </main>-->
+
+    <!--this will force the footer to be fixed to the bottom and will also make the top navigation fixed-->
+    <main class="mdl-layout__content"> 
+        <div class="mdl-layout__tab-panel">
+            <router-outlet></router-outlet>
+        </div>
     </main>
+
     <app-footer></app-footer>
 </div>

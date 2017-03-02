@@ -9,5 +9,19 @@
 
 export class AppComponent
 {
+    loading: boolean;
 
+    constructor()
+    {
+    }
+
+    ngOnInit()
+    {
+        this.loading = true;
+    }
+
+    ngAfterViewInit()
+    {
+        this.loading = false;
+    }
 }
