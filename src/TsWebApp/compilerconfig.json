@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "wwwroot/content/styles.css",
+    "inputFile": "wwwroot/content/styles.less"
+  },
+  {
+    "outputFile": "wwwroot/assets/styles.css",
+    "inputFile": "wwwroot/assets/styles.less"
+  },
+  {
+    "outputFile": "wwwroot/app/app.component.css",
+    "inputFile": "wwwroot/app/app.component.less"
+  },
+  {
+    "outputFile": "wwwroot/app/shared/page-not-found.component.css",
+    "inputFile": "wwwroot/app/shared/page-not-found.component.less"
+  },
+  {
+    "outputFile": "wwwroot/app/core/nav/nav.component.css",
+    "inputFile": "wwwroot/app/core/nav/nav.component.less"
+  }
+]

@@ -1,0 +1,35 @@
+﻿Links used to get this working:
+
+http://asp.net-hacker.rocks/2016/08/08/setup-angular2-typescript-aspnetcore-in-visualstudio.html
+
+Website with examples (from pluralsight):
+
+http://angular2-first-look.azurewebsites.net/
+
+Angular 2 latest package versions link:
+
+https://www.npmjs.com/~angular
+
+package.json notes:
+
+"scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "lite": "lite-server",
+    "postinstall": "typings install && gulp restore",
+    "tsc": "tsc", <!-- tsc is keyword for TypeScript -->
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  }
+
+Gulpfile.js is very important here because we require the "node_modules" folder to be copied into the wwwroot which is where all the requests are served with
+
+systemjs.config.js allows the Systemjs framework to load up our "app" directory which is where the typescript files are
+
+
+==============
+TYPINGS
+================
+
+typings.json has to be on the root of the application
+When added into the project, navigate to application in file explorer, open cmd and type "npm install typings -g"
+
