@@ -1,8 +1,9 @@
 ﻿import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { MaterialModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './core/nav/nav.component';
@@ -14,7 +15,8 @@ import { AppRoutingModule, routableComponents } from './app-routing.module';
 @NgModule({
     imports:
     [
-        MaterialModule,
+        MaterialModule.forRoot(),
+        FlexLayoutModule.forRoot(),
         BrowserModule,
         FormsModule,
         AppRoutingModule

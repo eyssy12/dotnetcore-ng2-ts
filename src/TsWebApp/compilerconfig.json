@@ -18,5 +18,13 @@
   {
     "outputFile": "wwwroot/app/core/nav/nav.component.css",
     "inputFile": "wwwroot/app/core/nav/nav.component.less"
+  },
+  {
+    "outputFile": "wwwroot/app/about/about.component.css",
+    "inputFile": "wwwroot/app/about/about.component.less"
+  },
+  {
+    "outputFile": "wwwroot/app/flexlayout/flex-layout.component.css",
+    "inputFile": "wwwroot/app/flexlayout/flex-layout.component.less"
   }
 ]

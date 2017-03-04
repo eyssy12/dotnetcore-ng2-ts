@@ -1,20 +1,129 @@
 ﻿
-<div >
-    <md-card>
-        <md-input-container flex>
-            <input mdInput placeholder="Placeholder text">
-        </md-input-container>
-    </md-card>
+<div>
+
+    <div class="flex-container"
+         fxLayout="row"
+         fxLayout.xs="column"
+         fxLayoutAlign="center"
+         fxLayoutAlign.xs="start">
+
+        <div class="flex-item" fxFlex="25%" fxFlex.xs="25%">
+            <md-card class="example-card">
+                <md-card-header>
+                    <div md-card-avatar class="example-header-image"></div>
+                    <md-card-title>Shiba Inu</md-card-title>
+                    <md-card-subtitle>Dog Breed</md-card-subtitle>
+                </md-card-header>
+                <img md-card-image src="../../assets/img/shiba1.jpg">
+                <md-card-content>
+                    <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                    </p>
+                </md-card-content>
+                <md-card-actions>
+                    <button md-button>LIKE</button>
+                    <button md-button>SHARE</button>
+                </md-card-actions>
+            </md-card>
+        </div>
+
+        <div class="flex-item" fxFlex="25%" fxFlex.xs="25%">
+            <md-card class="example-card">
+                <md-card-header>
+                    <div md-card-avatar class="example-header-image"></div>
+                    <md-card-title>Shiba Inu</md-card-title>
+                    <md-card-subtitle>Dog Breed</md-card-subtitle>
+                </md-card-header>
+                <img md-card-image src="../../assets/img/shiba1.jpg">
+                <md-card-content>
+                    <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                    </p>
+                </md-card-content>
+                <md-card-actions>
+                    <button md-button>LIKE</button>
+                    <button md-button>SHARE</button>
+                </md-card-actions>
+            </md-card>
+        </div>
+
+        <div class="flex-item" fxFlex="25%" fxFlex.xs="25%">
+            <md-card class="example-card">
+                <md-card-header>
+                    <div md-card-avatar class="example-header-image"></div>
+                    <md-card-title>Shiba Inu</md-card-title>
+                    <md-card-subtitle>Dog Breed</md-card-subtitle>
+                </md-card-header>
+                <img md-card-image src="../../assets/img/shiba1.jpg">
+                <md-card-content>
+                    <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                    </p>
+                </md-card-content>
+                <md-card-actions>
+                    <button md-button>LIKE</button>
+                    <button md-button>SHARE</button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
 
     <md-card>
-        <md-input-container>
-            <input mdInput placeholder="Middle Name (optional)">
-        </md-input-container>
-    </md-card>
+        <form class="about-form">
+            <md-input-container class="full-width">
+                <input mdInput placeholder="Company (disabled)" disabled value="Google">
+            </md-input-container>
 
-    <md-card>
-        <md-input-container>
-            <input mdInput placeholder="First Name" required value="Zagorskis">
-        </md-input-container>
+            <table class="full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <md-input-container class="md-input-has-placeholder">
+                            <input mdInput type="text" />
+                        </md-input-container>
+                    </td>
+                    <td>
+                        <md-input-container class="full-width">
+                            <input mdInput placeholder="Long Last Name That Will Be Truncated">
+                        </md-input-container>
+                    </td>
+                </tr>
+            </table>
+
+            <p>
+                <md-input-container class="full-width">
+                    <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+                </md-input-container>
+                <md-input-container class="full-width">
+                    <textarea mdInput placeholder="Address 2"></textarea>
+                </md-input-container>
+            </p>
+
+            <table class="full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <md-input-container class="full-width">
+                            <input mdInput placeholder="City">
+                        </md-input-container>
+                    </td>
+                    <td>
+                        <md-input-container class="full-width">
+                            <input mdInput placeholder="State">
+                        </md-input-container>
+                    </td>
+                    <td>
+                        <md-input-container class="full-width">
+                            <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+                            <md-hint align="right">{{postalCode.value.length}} / 5</md-hint>
+                        </md-input-container>
+                    </td>
+                </tr>
+            </table>
+        </form>
     </md-card>
 </div>

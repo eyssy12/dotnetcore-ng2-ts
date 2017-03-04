@@ -20,6 +20,7 @@
     "@angular/router": "3.4.8",
     "@angular/upgrade": "2.4.8",
     "@angular/material": "2.0.0-beta.2",
+    "@angular/flex-layout": "2.0.0-rc.1",
     "angular2-in-memory-web-api": "~0.0.21",
     "hammer": "~0.0.5",
     "bootstrap": "^3.3.7",

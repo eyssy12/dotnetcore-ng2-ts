@@ -10,9 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
-var material_1 = require('@angular/material');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
+var material_1 = require('@angular/material');
+var flex_layout_1 = require("@angular/flex-layout");
 var app_component_1 = require('./app.component');
 var nav_component_1 = require('./core/nav/nav.component');
 var footer_component_1 = require('./core/footer/footer.component');
@@ -24,7 +25,8 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
-                material_1.MaterialModule,
+                material_1.MaterialModule.forRoot(),
+                flex_layout_1.FlexLayoutModule.forRoot(),
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 app_routing_module_1.AppRoutingModule

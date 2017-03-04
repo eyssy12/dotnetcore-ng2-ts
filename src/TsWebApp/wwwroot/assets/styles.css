@@ -1,17 +1,6 @@
-﻿/* default .loading styles, .loading should be invisible, opacity: 0, z-index: -1 */
-.loading {
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: #000;
-  z-index: -1;
+﻿body {
+  margin: 0px;
 }
-/* .loading screen is visible when app is not bootstraped yet, .my-app is empty */
-my-app:empty + .loading {
-  opacity: 1;
-  z-index: 100;
+.full-width {
+  width: 100%;
 }

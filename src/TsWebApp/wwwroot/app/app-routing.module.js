@@ -12,11 +12,13 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var home_component_1 = require('./home/home.component');
 var about_component_1 = require('./about/about.component');
+var flex_layout_component_1 = require('./flexlayout/flex-layout.component');
 var page_not_found_component_1 = require('./shared/page-not-found.component');
 var routes = [
     { path: '', pathMatch: 'full', redirectTo: '404', },
     { path: 'home', component: home_component_1.HomeComponent },
     { path: 'about', component: about_component_1.AboutComponent },
+    { path: 'flex', component: flex_layout_component_1.FlexLayoutComponent },
     { path: '404', component: page_not_found_component_1.PageNotFoundComponent },
     { path: '**', pathMatch: 'full', redirectTo: '404' },
 ];
@@ -36,6 +38,7 @@ exports.AppRoutingModule = AppRoutingModule;
 exports.routableComponents = [
     home_component_1.HomeComponent,
     about_component_1.AboutComponent,
+    flex_layout_component_1.FlexLayoutComponent,
     page_not_found_component_1.PageNotFoundComponent
 ];
 //# sourceMappingURL=app-routing.module.js.map
