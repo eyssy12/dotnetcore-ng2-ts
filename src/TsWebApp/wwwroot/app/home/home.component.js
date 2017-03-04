@@ -13,7 +13,7 @@ var HomeComponent = (function () {
     function HomeComponent() {
     }
     HomeComponent.prototype.clicked = function (event) {
-        window.alert('Clicked!');
+        // window.alert('Clicked!');
     };
     HomeComponent = __decorate([
         core_1.Component({

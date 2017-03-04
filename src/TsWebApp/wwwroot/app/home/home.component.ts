@@ -10,6 +10,6 @@ export class HomeComponent
 {
     clicked(event)
     {
-        window.alert('Clicked!');
+        // window.alert('Clicked!');
     }
 }

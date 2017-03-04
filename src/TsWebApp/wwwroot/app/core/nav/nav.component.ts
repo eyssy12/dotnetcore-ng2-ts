@@ -13,7 +13,7 @@ export class NavComponent
 
     constructor()
     {
-        this.links = ['home', 'about', 'three', 'four'];
+        this.links = ['home', 'about', 'three', 'four']; // TODO: get links from a RouterService component/module
     }
 
     capitalizeLink(link: string)

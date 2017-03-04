@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var NavComponent = (function () {
     function NavComponent() {
-        this.links = ['home', 'about', 'three', 'four'];
+        this.links = ['home', 'about', 'three', 'four']; // TODO: get links from a RouterService component/module
     }
     NavComponent.prototype.capitalizeLink = function (link) {
         return link.toUpperCase();

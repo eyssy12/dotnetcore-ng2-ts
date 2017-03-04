@@ -1,11 +1,10 @@
 ﻿
-<header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-    <div class="mdl-layout--large-screen-only mdl-layout__header-row mdl-color--primary">
-    </div>
+<header>
     <!---- this cannot be self closable because System.js will complain and throw a parsing exception ---->
-    <md-card class="mdl-shadow--2dp">
+    <md-card class="mdl-shadow--20dp">
         <nav md-tab-nav-bar>
             <a md-tab-link
+               md-ripple 
                *ngFor="let link of links"
                [routerLink]="link"
                routerLinkActive #rla="routerLinkActive"

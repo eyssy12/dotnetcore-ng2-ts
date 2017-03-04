@@ -8,25 +8,24 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.teal-teal.min.css" />
 
-    <!-- TODO: need to figure out what's up with the different styles, etc -->
-    <!-- Commenting the below style sheet removes the ripple effect from buttons-->
-    <!--<link rel="stylesheet" href="/libs/@angular/material/deeppurple-amber.css" />-->
+    <!-- Styles of this are for raw angular 1 components -->
+    <!--<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.teal-teal.min.css" />-->
+
+    <!-- Styles for this come from angular/material and are used by the directives of Angular2 typescript modules -->
+    <link rel="stylesheet" href="/libs/@angular/material/deeppurple-amber.css" />
 
     <!-- Override styles -->
     <link rel="stylesheet" href="/assets/styles.css" />
 
     <!-- 1. Load libraries -->
-
-    <!-- Polyfill(s) for older browsers -->
     <!-- ORDER MATTERS HERE-->
     <script src="/libs/core-js/core.js"></script>
     <script src="/libs/zone.js/zone.js"></script>
     <script src="/libs/reflect-metadata/reflect.js"></script>
     <script src="/libs/systemjs/system.src.js"></script>
 
-    <!-- 2. Configure SystemJS -->
+    <!-- 2. Configure SystemJS and use above libraries -->
     <script src="./systemjs.config.js"></script>
     <script>
         System
@@ -37,7 +36,7 @@
             });
     </script>
 </head>
-<body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+<body class="mat-app-background">
     <my-app></my-app>
 </body>
 </html>
