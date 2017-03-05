@@ -11,3 +11,17 @@
 md-card {
   margin: 16px;
 }
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 6px !important;
+}
+.native.win32 *::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+}
