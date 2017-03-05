@@ -1,0 +1,222 @@
+﻿[
+  {
+    "_id": "58bc2e983329b09119a805ea",
+    "index": 0,
+    "guid": "e34e7e4a-a27e-4926-9c63-e523629be0be",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Osborn Hooper",
+        "date": "Sun Oct 30 1994 20:03:27 GMT+0000 (GMT Standard Time)"
+      },
+      {
+        "id": 1,
+        "name": "Leigh Mckinney",
+        "date": "Sun Aug 21 1994 14:04:55 GMT+0100 (GMT Summer Time)"
+      },
+      {
+        "id": 2,
+        "name": "Myra Mccall",
+        "date": "Sat Sep 15 1973 17:58:48 GMT+0100 (GMT Summer Time)"
+      }
+    ]
+  },
+  {
+    "_id": "58bc2e987ae0d49ef6b174e6",
+    "index": 1,
+    "guid": "3f6d81b3-1cb0-41df-817c-1c6e79885ae7",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Brenda Haley",
+        "date": "Sun Jun 21 1987 05:20:57 GMT+0100 (GMT Summer Time)"
+      },
+      {
+        "id": 1,
+        "name": "Kathy King",
+        "date": "Fri Jun 03 2005 10:16:52 GMT+0100 (GMT Summer Time)"
+      },
+      {
+        "id": 2,
+        "name": "Jerry Fox",
+        "date": "Sun Oct 20 2013 01:48:20 GMT+0100 (GMT Summer Time)"
+      }
+    ]
+  },
+  {
+    "_id": "58bc2e98bf1ab20689818b0d",
+    "index": 2,
+    "guid": "cfa29d95-b1b2-45ca-a936-21acb5619c98",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Sexton Spence",
+        "date": "Tue Sep 15 1981 15:02:26 GMT+0100 (GMT Summer Time)"
+      },
+      {
+        "id": 1,
+        "name": "Evelyn Huff",
+        "date": "Fri Aug 17 1973 10:11:15 GMT+0100 (GMT Summer Time)"
+      },
+      {
+        "id": 2,
+        "name": "Louella Graves",
+        "date": "Tue Dec 12 2000 07:17:58 GMT+0000 (GMT Standard Time)"
+      }
+    ]
+  },
+  {
+    "_id": "58bc2e98af0dbfa2da112283",
+    "index": 3,
+    "guid": "a59cf6e1-bd2d-4978-a7cd-7f9bb5d9b7af",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Theresa Kirkland",
+        "date": "Wed Mar 12 1975 15:24:39 GMT+0000 (GMT Standard Time)"
+      },
+      {
+        "id": 1,
+        "name": "Ilene Nash",
+        "date": "Tue Sep 15 2015 03:43:57 GMT+0100 (GMT Summer Time)"
+      },
+      {
+        "id": 2,
+        "name": "Hendrix Peters",
+        "date": "Wed Aug 20 1997 02:51:50 GMT+0100 (GMT Summer Time)"
+      }
+    ]
+  },
+  {
+    "_id": "58bc2e984fa3256f5c89041d",
+    "index": 4,
+    "guid": "d53f2fea-6b1e-4edd-b1d7-4755641ed70c",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Heather May",
+        "date": "Mon Dec 15 1975 21:00:24 GMT+0000 (GMT Standard Time)"
+      },
+      {
+        "id": 1,
+        "name": "Nelson David",
+        "date": "Thu Jan 13 1972 23:08:03 GMT+0000 (GMT Standard Time)"
+      },
+      {
+        "id": 2,
+        "name": "George Burton",
+        "date": "Mon Oct 09 1989 05:49:58 GMT+0100 (GMT Summer Time)"
+      }
+    ]
+  },
+  {
+    "_id": "58bc2e98e881e704eba62ab0",
+    "index": 5,
+    "guid": "84ab5aa1-58c9-4cea-add8-81abe2a46ab9",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Debbie Bowers",
+        "date": "Fri Feb 24 1989 04:01:16 GMT+0000 (GMT Standard Time)"
+      },
+      {
+        "id": 1,
+        "name": "Bright Greer",
+        "date": "Sat May 09 1992 18:21:51 GMT+0100 (GMT Summer Time)"
+      },
+      {
+        "id": 2,
+        "name": "Shawn Frazier",
+        "date": "Wed Oct 23 1991 19:38:08 GMT+0100 (GMT Summer Time)"
+      }
+    ]
+  },
+  {
+    "_id": "58bc2e98e392fe4394068978",
+    "index": 6,
+    "guid": "1bf77bf1-9e4b-4375-81eb-00cc659ee23d",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Foster Macias",
+        "date": "Mon Dec 31 1979 01:32:45 GMT+0000 (GMT Standard Time)"
+      },
+      {
+        "id": 1,
+        "name": "Tasha Downs",
+        "date": "Mon May 18 1981 05:13:51 GMT+0100 (GMT Summer Time)"
+      },
+      {
+        "id": 2,
+        "name": "Muriel Galloway",
+        "date": "Mon Dec 12 1994 04:37:34 GMT+0000 (GMT Standard Time)"
+      }
+    ]
+  },
+  {
+    "_id": "58bc2e98d4528985abf6da76",
+    "index": 7,
+    "guid": "9f9e3b64-3e31-4246-9d7d-5a50067068b7",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Maxine Cannon",
+        "date": "Sat Jul 15 2000 20:52:15 GMT+0100 (GMT Summer Time)"
+      },
+      {
+        "id": 1,
+        "name": "Florence Morin",
+        "date": "Wed Oct 10 1990 02:37:19 GMT+0100 (GMT Summer Time)"
+      },
+      {
+        "id": 2,
+        "name": "Wade Rutledge",
+        "date": "Sun Apr 11 2004 02:01:09 GMT+0100 (GMT Summer Time)"
+      }
+    ]
+  },
+  {
+    "_id": "58bc2e983496a274bb2d456a",
+    "index": 8,
+    "guid": "9836ae91-6030-4fdc-b182-bc78586f9ab4",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Madeline Phillips",
+        "date": "Sat Oct 21 2006 20:24:48 GMT+0100 (GMT Summer Time)"
+      },
+      {
+        "id": 1,
+        "name": "Wong Mclaughlin",
+        "date": "Sat Mar 28 2015 02:19:41 GMT+0000 (GMT Standard Time)"
+      },
+      {
+        "id": 2,
+        "name": "Finley Gibbs",
+        "date": "Tue Jun 12 2012 00:23:37 GMT+0100 (GMT Summer Time)"
+      }
+    ]
+  },
+  {
+    "_id": "58bc2e98881bb2262a01d036",
+    "index": 9,
+    "guid": "326a1df8-af43-4c02-890a-828cf40fb7a1",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Catalina Pitts",
+        "date": "Mon Oct 26 2015 09:37:36 GMT+0000 (GMT Standard Time)"
+      },
+      {
+        "id": 1,
+        "name": "Rosanna Ramsey",
+        "date": "Thu Jan 05 1984 02:28:55 GMT+0000 (GMT Standard Time)"
+      },
+      {
+        "id": 2,
+        "name": "Keith Harmon",
+        "date": "Tue Jan 13 1998 08:43:10 GMT+0000 (GMT Standard Time)"
+      }
+    ]
+  }
+]
