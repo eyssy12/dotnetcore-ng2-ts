@@ -26,5 +26,9 @@
   {
     "outputFile": "wwwroot/app/flexlayout/flex-layout.component.css",
     "inputFile": "wwwroot/app/flexlayout/flex-layout.component.less"
+  },
+  {
+    "outputFile": "wwwroot/app/core/footer/footer.component.css",
+    "inputFile": "wwwroot/app/core/footer/footer.component.less"
   }
 ]

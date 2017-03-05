@@ -16,7 +16,7 @@ var PageNotFoundComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             templateUrl: './page-not-found.component.html',
-            styleUrls: ['./page-not-found.component.css']
+            styleUrls: ['./page-not-found.component.min.css']
         }), 
         __metadata('design:paramtypes', [])
     ], PageNotFoundComponent);

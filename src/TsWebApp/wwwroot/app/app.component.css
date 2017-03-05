@@ -1,3 +1,21 @@
 ﻿div md-card button {
   margin: 8px;
 }
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  height: calc(100% - 100px);
+  /*less ignores the transformation here*/
+}
+.main-content {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+.main-container {
+  padding-top: 50px;
+}
+.flex-item.flex-nav {
+  padding-bottom: 100px;
+}

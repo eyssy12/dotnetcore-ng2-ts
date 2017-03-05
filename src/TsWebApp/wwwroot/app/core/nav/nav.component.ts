@@ -4,7 +4,7 @@
     moduleId: module.id,
     selector: 'app-nav',
     templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.css']
+    styleUrls: ['./nav.component.min.css']
 })
 
 export class NavComponent

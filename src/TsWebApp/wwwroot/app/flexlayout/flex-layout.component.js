@@ -20,7 +20,7 @@ var FlexLayoutComponent = (function () {
             selector: 'flex-layout-demo',
             templateUrl: './flex-layout.component.html',
             styleUrls: [
-                './flex-layout.component.css'
+                './flex-layout.component.min.css'
             ]
         }), 
         __metadata('design:paramtypes', [])

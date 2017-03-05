@@ -1,6 +1,13 @@
 ﻿body {
+  height: 100%;
   margin: 0px;
 }
 .full-width {
   width: 100%;
+}
+.flex-wrapped {
+  flex-wrap: wrap;
+}
+md-card {
+  margin: 16px;
 }

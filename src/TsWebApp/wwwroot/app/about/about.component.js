@@ -17,7 +17,7 @@ var AboutComponent = (function () {
             moduleId: module.id,
             selector: 'app-about',
             templateUrl: './about.component.html',
-            styleUrls: ['./about.component.css']
+            styleUrls: ['./about.component.min.css']
         }), 
         __metadata('design:paramtypes', [])
     ], AboutComponent);
