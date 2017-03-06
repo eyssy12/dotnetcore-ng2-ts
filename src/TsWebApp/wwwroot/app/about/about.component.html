@@ -25,7 +25,48 @@
             </md-card-actions>
         </md-card>
     </div>
-
+    <div class="flex-item" fxFlex="25%" fxFlex.xs="25%">
+        <md-card class="example-card">
+            <md-card-header>
+                <div md-card-avatar class="example-header-image"></div>
+                <md-card-title>Shiba Inu</md-card-title>
+                <md-card-subtitle>Dog Breed</md-card-subtitle>
+            </md-card-header>
+            <img md-card-image src="../../assets/img/shiba1.jpg">
+            <md-card-content>
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                </p>
+            </md-card-content>
+            <md-card-actions>
+                <button md-button>LIKE</button>
+                <button md-button>SHARE</button>
+            </md-card-actions>
+        </md-card>
+    </div>
+    <div class="flex-item" fxFlex="25%" fxFlex.xs="25%">
+        <md-card class="example-card">
+            <md-card-header>
+                <div md-card-avatar class="example-header-image"></div>
+                <md-card-title>Shiba Inu</md-card-title>
+                <md-card-subtitle>Dog Breed</md-card-subtitle>
+            </md-card-header>
+            <img md-card-image src="../../assets/img/shiba1.jpg">
+            <md-card-content>
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                </p>
+            </md-card-content>
+            <md-card-actions>
+                <button md-button>LIKE</button>
+                <button md-button>SHARE</button>
+            </md-card-actions>
+        </md-card>
+    </div>
     <div class="flex-item" fxFlex="25%" fxFlex.xs="25%">
         <md-card class="example-card">
             <md-card-header>
@@ -69,51 +110,21 @@
         </md-card>
     </div>
 
-    <div class="flex-item" fxFlex="25%" fxFlex.xs="25%">
-        <md-card class="example-card">
-            <md-card-header>
-                <div md-card-avatar class="example-header-image"></div>
-                <md-card-title>Shiba Inu</md-card-title>
-                <md-card-subtitle>Dog Breed</md-card-subtitle>
-            </md-card-header>
-            <img md-card-image src="../../assets/img/shiba1.jpg">
-            <md-card-content>
-                <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                </p>
-            </md-card-content>
-            <md-card-actions>
-                <button md-button>LIKE</button>
-                <button md-button>SHARE</button>
-            </md-card-actions>
-        </md-card>
-    </div>
+    <md-card fxFlex="100%">
 
-    <div class="flex-item" fxFlex="25%" fxFlex.xs="25%">
-        <md-card class="example-card">
-            <md-card-header>
-                <div md-card-avatar class="example-header-image"></div>
-                <md-card-title>Shiba Inu</md-card-title>
-                <md-card-subtitle>Dog Breed</md-card-subtitle>
-            </md-card-header>
-            <img md-card-image src="../../assets/img/shiba1.jpg">
-            <md-card-content>
-                <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                </p>
-            </md-card-content>
-            <md-card-actions>
-                <button md-button>LIKE</button>
-                <button md-button>SHARE</button>
-            </md-card-actions>
-        </md-card>
-    </div>
+        <div class="flex-container flex-wrapped"
+             fxLayout="row"
+             fxLayout.xs="column"
+             fxLayoutAlign="space-around center"
+             fxLayoutAlign.xs="start">
+            <h3 class="flex-item" fxFlex="100%">
+                Routes from Routing Module:
+            </h3>
+            <p class="flex-item" fxFlex="5%" *ngFor="let friendlyRoute of getFriendlyNameRoutes()">
+                {{ friendlyRoute }}
+            </p>
+        </div>
 
-    <md-card>
         <div class="flex-item" fxFlex="100%">
             Outter flex DIV
         </div>

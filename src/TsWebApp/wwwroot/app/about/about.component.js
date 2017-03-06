@@ -9,9 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var app_routing_module_1 = require('./../core/app-routing.module');
 var AboutComponent = (function () {
     function AboutComponent() {
+        var _this = this;
+        this.friendlyNameRoutes = [];
+        app_routing_module_1.AppRoutes.forEach(function (value, index) {
+            _this.friendlyNameRoutes.push(value.getFriendlyName());
+        });
     }
+    AboutComponent.prototype.getFriendlyNameRoutes = function () {
+        return this.friendlyNameRoutes;
+    };
     AboutComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

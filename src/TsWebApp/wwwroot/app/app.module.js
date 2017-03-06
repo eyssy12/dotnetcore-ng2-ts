@@ -18,7 +18,7 @@ var app_component_1 = require('./app.component');
 var nav_component_1 = require('./core/nav/nav.component');
 var footer_component_1 = require('./core/footer/footer.component');
 //Should be last in load order
-var app_routing_module_1 = require('./app-routing.module');
+var app_routing_module_1 = require('./core/app-routing.module');
 var AppModule = (function () {
     function AppModule() {
     }

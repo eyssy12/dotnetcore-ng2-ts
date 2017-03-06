@@ -1,5 +1,7 @@
 ﻿import { Component } from '@angular/core';
 
+import { AppRoutes } from './../app-routing.module';
+
 @Component({
     moduleId: module.id,
     selector: 'app-nav',
@@ -9,11 +11,15 @@
 
 export class NavComponent
 {
-    links: string[]
+    private links: string[] = [];
 
     constructor()
     {
-        this.links = ['home', 'about', 'flex', 'three', 'four']; // TODO: get links from a RouterService component/module
+        AppRoutes
+            .filter(value => value.isUserRoutable())
+            .forEach((value) => {
+                this.links.push(value.getPath());
+            });
     }
 
     capitalizeLink(link: string)

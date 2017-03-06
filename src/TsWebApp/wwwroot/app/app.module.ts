@@ -10,7 +10,7 @@ import { NavComponent } from './core/nav/nav.component';
 import { FooterComponent } from './core/footer/footer.component';
 
 //Should be last in load order
-import { AppRoutingModule, routableComponents } from './app-routing.module';
+import { AppRoutingModule, routableComponents } from './core/app-routing.module';
 
 @NgModule({
     imports:

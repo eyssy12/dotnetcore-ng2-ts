@@ -9,9 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var app_routing_module_1 = require('./../app-routing.module');
 var NavComponent = (function () {
     function NavComponent() {
-        this.links = ['home', 'about', 'flex', 'three', 'four']; // TODO: get links from a RouterService component/module
+        var _this = this;
+        this.links = [];
+        app_routing_module_1.AppRoutes
+            .filter(function (value) { return value.isUserRoutable(); })
+            .forEach(function (value) {
+            _this.links.push(value.getPath());
+        });
     }
     NavComponent.prototype.capitalizeLink = function (link) {
         return link.toUpperCase();
