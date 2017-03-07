@@ -19,6 +19,9 @@ var Person = (function () {
         this.lastName = lastName;
         this.date = date;
     }
+    Person.prototype.getFullName = function () {
+        return this.firstName + " " + this.lastName;
+    };
     return Person;
 }());
 exports.Person = Person;
@@ -28,9 +31,8 @@ var PeopleService = (function () {
     }
     PeopleService.prototype.getPeople = function () {
         return this.http
-            .get('./people.json')
-            .map(function (response) { return response.json().data; })
-            .do(function (data) { return console.log(data); })
+            .get('app/api/people.json')
+            .map(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     PeopleService.prototype.handleError = function (error) {

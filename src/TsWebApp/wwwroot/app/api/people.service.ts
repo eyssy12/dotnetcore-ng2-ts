@@ -12,6 +12,10 @@ export class Person
         public date: Date)
     {
     }
+
+    getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
 }
 
 @Injectable()
@@ -27,9 +31,8 @@ export class PeopleService
     getPeople()
     {
         return this.http
-            .get('./people.json')
-            .map((response: Response) => <Person[]>response.json().data)
-            .do(data => console.log(data))
+            .get('app/api/people.json')
+            .map((response: Response) => <Person[]>response.json())
             .catch(this.handleError);
     }
 
