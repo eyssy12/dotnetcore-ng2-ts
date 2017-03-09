@@ -133,7 +133,7 @@
 
             <div class="flex-item buttons" fxFlex="100%">
                 <button md-raised-button
-                        (click)="fetchPeople()"
+                        (click)="getPeople()"
                         color="primary">
                     Get People
                 </button>
@@ -145,18 +145,18 @@
                 </button>
             </div>
 
-            <div *ngIf="hasPeople()"
+            <div *ngIf="people.length > 0"
                  fxFlex="100%"
-                 class="flex-container flex-wrapped"
+                 class="flex-container flex-wrapped person-container"
                  fxLayout="row"
                  fxLayout.xs="column"
-                 fxLayoutAlign="space-around center"
+                 fxLayoutAlign="start"
                  fxLayoutAlign.xs="start">
                 <h3 class="flex-item" fxFlex="100%">
                     People loaded:
                 </h3>
-                <p class="flex-item" fxFlex="5%" *ngFor="let person of getPeople">
-                    {{ person.getFullName }}
+                <p class="flex-item person-item" *ngFor="let person of people; let i = index;">
+                    {{ person.firstName }} {{ person.lastName }}
                 </p>
             </div>
         </div>

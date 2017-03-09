@@ -4,6 +4,8 @@ import { Observable } from 'rxjs/Observable';
 
 export class Person
 {
+    public fullName: string;
+
     constructor(
         public id: number,
         public guid: string,
@@ -11,10 +13,7 @@ export class Person
         public lastName: string,
         public date: Date)
     {
-    }
-
-    getFullName() {
-        return this.firstName + " " + this.lastName;
+        this.fullName = this.firstName + " " + this.lastName;
     }
 }
 
@@ -28,7 +27,7 @@ export class PeopleService
         this.http = http;
     }
 
-    getPeople()
+    getPeople() : Observable<Person[]>
     {
         return this.http
             .get('app/api/people.json')

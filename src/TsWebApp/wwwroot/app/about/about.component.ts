@@ -1,4 +1,6 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
 
 import { Person, PeopleService } from './../api/people.service';
 import { AppRoutes } from './../core/app-routing.module';
@@ -11,55 +13,47 @@ import { AppRoutes } from './../core/app-routing.module';
     providers: [PeopleService]
 })
 
-export class AboutComponent
+export class AboutComponent implements OnInit, OnDestroy
 {
-    private people = [];
-    private friendlyNameRoutes: string[] = [];
     private personService: PeopleService;
+    private friendlyNameRoutes: string[] = [];
+
+    people: Person[] = [];
 
     constructor(personService: PeopleService)
     {
+        this.personService = personService;
+    }
+
+    ngOnInit() {
         AppRoutes.forEach((value, index) => {
             this.friendlyNameRoutes.push(value.getFriendlyName());
         });
 
-        this.personService = personService;
+        this.getPeople();
     }
 
-    ngOnInit()
-    {
+    ngOnDestroy() {
         this.people = [];
-        this.fetchPeople();
     }
 
-    fetchPeople()
-    {
+    getPeople() {
+        this.people = [];
+
         this.personService
             .getPeople()
             .subscribe(
-                people => {
-                    this.people.push(people);
-                },
-                error => console.error(<any>error));
+            people => {
+                this.people = people;
+            },
+            error => console.log(error));
     }
 
-    getPeople()
-    {
-        return this.people;
-    }
-
-    clearPeople()
-    {
+    clearPeople() {
         this.people = [];
     }
 
-    hasPeople()
-    {
-        return this.people.length > 0;
-    }
-
-    getFriendlyNameRoutes(): string[]
-    {
+    getFriendlyNameRoutes(): string[] {
         return this.friendlyNameRoutes;
     }
 }

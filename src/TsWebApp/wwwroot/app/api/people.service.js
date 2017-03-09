@@ -18,10 +18,8 @@ var Person = (function () {
         this.firstName = firstName;
         this.lastName = lastName;
         this.date = date;
+        this.fullName = this.firstName + " " + this.lastName;
     }
-    Person.prototype.getFullName = function () {
-        return this.firstName + " " + this.lastName;
-    };
     return Person;
 }());
 exports.Person = Person;

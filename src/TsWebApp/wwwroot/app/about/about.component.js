@@ -13,34 +13,31 @@ var people_service_1 = require('./../api/people.service');
 var app_routing_module_1 = require('./../core/app-routing.module');
 var AboutComponent = (function () {
     function AboutComponent(personService) {
-        var _this = this;
-        this.people = [];
         this.friendlyNameRoutes = [];
-        app_routing_module_1.AppRoutes.forEach(function (value, index) {
-            _this.friendlyNameRoutes.push(value.getFriendlyName());
-        });
+        this.people = [];
         this.personService = personService;
     }
     AboutComponent.prototype.ngOnInit = function () {
-        this.people = [];
-        this.fetchPeople();
-    };
-    AboutComponent.prototype.fetchPeople = function () {
         var _this = this;
+        app_routing_module_1.AppRoutes.forEach(function (value, index) {
+            _this.friendlyNameRoutes.push(value.getFriendlyName());
+        });
+        this.getPeople();
+    };
+    AboutComponent.prototype.ngOnDestroy = function () {
+        this.people = [];
+    };
+    AboutComponent.prototype.getPeople = function () {
+        var _this = this;
+        this.people = [];
         this.personService
             .getPeople()
             .subscribe(function (people) {
-            _this.people.push(people);
-        }, function (error) { return console.error(error); });
-    };
-    AboutComponent.prototype.getPeople = function () {
-        return this.people;
+            _this.people = people;
+        }, function (error) { return console.log(error); });
     };
     AboutComponent.prototype.clearPeople = function () {
         this.people = [];
-    };
-    AboutComponent.prototype.hasPeople = function () {
-        return this.people.length > 0;
     };
     AboutComponent.prototype.getFriendlyNameRoutes = function () {
         return this.friendlyNameRoutes;
