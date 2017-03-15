@@ -10,12 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var people_service_1 = require('./../api/people.service');
+var snackbar_service_1 = require('./../core/snackbar.service');
 var app_routing_module_1 = require('./../core/app-routing.module');
 var AboutComponent = (function () {
-    function AboutComponent(personService) {
+    function AboutComponent(personService, snackBarService) {
         this.friendlyNameRoutes = [];
         this.people = [];
+        this.shibaCards = 1;
+        this.shibaCardsArray = [1];
         this.personService = personService;
+        this.snackBarService = snackBarService;
     }
     AboutComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -25,22 +29,30 @@ var AboutComponent = (function () {
         this.getPeople();
     };
     AboutComponent.prototype.ngOnDestroy = function () {
-        this.people = [];
+        this.emptyPeopleArray();
     };
     AboutComponent.prototype.getPeople = function () {
         var _this = this;
-        this.people = [];
+        this.emptyPeopleArray();
         this.personService
             .getPeople()
             .subscribe(function (people) {
             _this.people = people;
+            _this.snackBarService.openSnackBar(_this.people.length + ' People received.');
         }, function (error) { return console.log(error); });
     };
     AboutComponent.prototype.clearPeople = function () {
-        this.people = [];
+        this.emptyPeopleArray();
+        this.snackBarService.openSnackBar('People cleared!');
     };
     AboutComponent.prototype.getFriendlyNameRoutes = function () {
         return this.friendlyNameRoutes;
+    };
+    AboutComponent.prototype.sliderChanged = function (event) {
+        this.shibaCardsArray = new Array(this.shibaCards).fill(0);
+    };
+    AboutComponent.prototype.emptyPeopleArray = function () {
+        this.people = [];
     };
     AboutComponent = __decorate([
         core_1.Component({
@@ -48,9 +60,30 @@ var AboutComponent = (function () {
             selector: 'app-about',
             templateUrl: './about.component.html',
             styleUrls: ['./about.component.min.css'],
-            providers: [people_service_1.PeopleService]
+            providers: [
+                people_service_1.PeopleService,
+                snackbar_service_1.SnackBarService
+            ],
+            animations: [
+                core_1.trigger('flyInOut', [
+                    core_1.state('in', core_1.style({ opacity: 1, transform: 'translateX(0)' })),
+                    core_1.transition('void => *', [
+                        core_1.style({
+                            opacity: 0,
+                            transform: 'translateX(-100%)'
+                        }),
+                        core_1.animate('0.2s ease-in')
+                    ]),
+                    core_1.transition('* => void', [
+                        core_1.animate('0.2s 10 ease-out', core_1.style({
+                            opacity: 0,
+                            transform: 'translateX(100%)'
+                        }))
+                    ])
+                ])
+            ]
         }), 
-        __metadata('design:paramtypes', [people_service_1.PeopleService])
+        __metadata('design:paramtypes', [people_service_1.PeopleService, snackbar_service_1.SnackBarService])
     ], AboutComponent);
     return AboutComponent;
 }());
