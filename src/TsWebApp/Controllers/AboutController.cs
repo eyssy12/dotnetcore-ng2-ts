@@ -4,9 +4,10 @@
     using System.Collections.Generic;
     using Microsoft.AspNet.Mvc;
     using Models;
+    using Mvc;
     using Newtonsoft.Json;
 
-    [Route("[controller]")]
+    [ControllerRoute]
     public class AboutController : Controller
     {
         [HttpGet]
