@@ -1,33 +1,42 @@
 ﻿
-<md-card>
-    <h1>Home page</h1>
-    <button md-raised-button 
-            (click)="clicked($event)" 
-            color="primary"
-            md-ripple >
-        Click me
-    </button>
-    <!--<md-spinner></md-spinner>-->
-    <h2>Header 2</h2>
-    <h3>Header 3</h3>
-    <h4>Header 4</h4>
-    <h5>Header 5</h5>
+<div class="flex-container"
+     fxLayout="row"
+     fxLayoutAlign="space-around center"
+     fxLayout.xs="column"
+     fxLayoutAlign.xs="space-around center">
 
-    <div>
+    <md-card class="flex-item" fxFlex="60%">
+        <h1>Home page</h1>
+        <button md-raised-button
+                (click)="clicked($event)"
+                color="primary">
+            Click me
+        </button>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel hendrerit augue, eu efficitur nunc. In ultricies ornare velit nec tincidunt. Nulla placerat hendrerit tristique. Phasellus vehicula elit et placerat varius. Integer porta, mi non molestie consectetur, odio ex feugiat est, vel vulputate tortor dolor id nunc. Donec pellentesque pharetra libero quis commodo. Quisque mollis pretium tortor molestie facilisis. Donec nulla erat, interdum ornare erat vestibulum, eleifend mattis neque. Donec et interdum ligula. Morbi in viverra velit, et dictum nisl. Phasellus elementum at enim ut imperdiet. Curabitur hendrerit rhoncus felis, quis congue ex consequat ornare.
-
-            Phasellus risus ante, malesuada sit amet cursus eu, lacinia ac erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur viverra posuere ante a lacinia. Vestibulum eu velit sed lorem hendrerit volutpat ut vitae justo. Aliquam erat volutpat. Ut a magna egestas, cursus neque at, iaculis sem. Aenean at placerat libero.
-
-            Quisque porttitor urna in diam sollicitudin, ut mollis quam suscipit. Fusce consequat auctor lacus, nec sodales neque varius nec. Donec auctor dignissim hendrerit. Nullam finibus tellus et eros porttitor blandit. Praesent ut ornare turpis. Sed et nisl ut augue pellentesque facilisis. Integer varius non massa at finibus. Mauris placerat, nisi vel imperdiet varius, urna lorem gravida quam, vel feugiat nulla magna eu est. Suspendisse accumsan eu justo vel maximus. Etiam tempus nec mauris sit amet feugiat. Integer viverra ac ex ac tincidunt. Nunc malesuada lacus ac tortor luctus, fermentum efficitur diam placerat. Phasellus ac lacinia arcu. Suspendisse eu felis sit amet ante auctor tempus eu in dui. Vestibulum at varius tortor. Fusce aliquet mi id mollis iaculis.
+            Investigate SignalR with ng2: <a target="_blank" href="https://github.com/HNeukermans/ng2-signalr">Github source</a>
         </p>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+        <h4>Header 4</h4>
+        <h5>Header 5</h5>
 
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel hendrerit augue, eu efficitur nunc. In ultricies ornare velit nec tincidunt. Nulla placerat hendrerit tristique. Phasellus vehicula elit et placerat varius. Integer porta, mi non molestie consectetur, odio ex feugiat est, vel vulputate tortor dolor id nunc. Donec pellentesque pharetra libero quis commodo. Quisque mollis pretium tortor molestie facilisis. Donec nulla erat, interdum ornare erat vestibulum, eleifend mattis neque. Donec et interdum ligula. Morbi in viverra velit, et dictum nisl. Phasellus elementum at enim ut imperdiet. Curabitur hendrerit rhoncus felis, quis congue ex consequat ornare.
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel hendrerit augue, eu efficitur nunc. In ultricies ornare velit nec tincidunt. Nulla placerat hendrerit tristique. Phasellus vehicula elit et placerat varius. Integer porta, mi non molestie consectetur, odio ex feugiat est, vel vulputate tortor dolor id nunc. Donec pellentesque pharetra libero quis commodo. Quisque mollis pretium tortor molestie facilisis. Donec nulla erat, interdum ornare erat vestibulum, eleifend mattis neque. Donec et interdum ligula. Morbi in viverra velit, et dictum nisl. Phasellus elementum at enim ut imperdiet. Curabitur hendrerit rhoncus felis, quis congue ex consequat ornare.
 
-            Phasellus risus ante, malesuada sit amet cursus eu, lacinia ac erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur viverra posuere ante a lacinia. Vestibulum eu velit sed lorem hendrerit volutpat ut vitae justo. Aliquam erat volutpat. Ut a magna egestas, cursus neque at, iaculis sem. Aenean at placerat libero.
+                Phasellus risus ante, malesuada sit amet cursus eu, lacinia ac erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur viverra posuere ante a lacinia. Vestibulum eu velit sed lorem hendrerit volutpat ut vitae justo. Aliquam erat volutpat. Ut a magna egestas, cursus neque at, iaculis sem. Aenean at placerat libero.
 
-            Quisque porttitor urna in diam sollicitudin, ut mollis quam suscipit. Fusce consequat auctor lacus, nec sodales neque varius nec. Donec auctor dignissim hendrerit. Nullam finibus tellus et eros porttitor blandit. Praesent ut ornare turpis. Sed et nisl ut augue pellentesque facilisis. Integer varius non massa at finibus. Mauris placerat, nisi vel imperdiet varius, urna lorem gravida quam, vel feugiat nulla magna eu est. Suspendisse accumsan eu justo vel maximus. Etiam tempus nec mauris sit amet feugiat. Integer viverra ac ex ac tincidunt. Nunc malesuada lacus ac tortor luctus, fermentum efficitur diam placerat. Phasellus ac lacinia arcu. Suspendisse eu felis sit amet ante auctor tempus eu in dui. Vestibulum at varius tortor. Fusce aliquet mi id mollis iaculis.
-        </p>
-    </div>
-</md-card>
+                Quisque porttitor urna in diam sollicitudin, ut mollis quam suscipit. Fusce consequat auctor lacus, nec sodales neque varius nec. Donec auctor dignissim hendrerit. Nullam finibus tellus et eros porttitor blandit. Praesent ut ornare turpis. Sed et nisl ut augue pellentesque facilisis. Integer varius non massa at finibus. Mauris placerat, nisi vel imperdiet varius, urna lorem gravida quam, vel feugiat nulla magna eu est. Suspendisse accumsan eu justo vel maximus. Etiam tempus nec mauris sit amet feugiat. Integer viverra ac ex ac tincidunt. Nunc malesuada lacus ac tortor luctus, fermentum efficitur diam placerat. Phasellus ac lacinia arcu. Suspendisse eu felis sit amet ante auctor tempus eu in dui. Vestibulum at varius tortor. Fusce aliquet mi id mollis iaculis.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel hendrerit augue, eu efficitur nunc. In ultricies ornare velit nec tincidunt. Nulla placerat hendrerit tristique. Phasellus vehicula elit et placerat varius. Integer porta, mi non molestie consectetur, odio ex feugiat est, vel vulputate tortor dolor id nunc. Donec pellentesque pharetra libero quis commodo. Quisque mollis pretium tortor molestie facilisis. Donec nulla erat, interdum ornare erat vestibulum, eleifend mattis neque. Donec et interdum ligula. Morbi in viverra velit, et dictum nisl. Phasellus elementum at enim ut imperdiet. Curabitur hendrerit rhoncus felis, quis congue ex consequat ornare.
+
+                Phasellus risus ante, malesuada sit amet cursus eu, lacinia ac erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur viverra posuere ante a lacinia. Vestibulum eu velit sed lorem hendrerit volutpat ut vitae justo. Aliquam erat volutpat. Ut a magna egestas, cursus neque at, iaculis sem. Aenean at placerat libero.
+
+                Quisque porttitor urna in diam sollicitudin, ut mollis quam suscipit. Fusce consequat auctor lacus, nec sodales neque varius nec. Donec auctor dignissim hendrerit. Nullam finibus tellus et eros porttitor blandit. Praesent ut ornare turpis. Sed et nisl ut augue pellentesque facilisis. Integer varius non massa at finibus. Mauris placerat, nisi vel imperdiet varius, urna lorem gravida quam, vel feugiat nulla magna eu est. Suspendisse accumsan eu justo vel maximus. Etiam tempus nec mauris sit amet feugiat. Integer viverra ac ex ac tincidunt. Nunc malesuada lacus ac tortor luctus, fermentum efficitur diam placerat. Phasellus ac lacinia arcu. Suspendisse eu felis sit amet ante auctor tempus eu in dui. Vestibulum at varius tortor. Fusce aliquet mi id mollis iaculis.
+            </p>
+        </div>
+    </md-card>
+</div>
+

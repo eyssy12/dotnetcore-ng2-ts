@@ -1,15 +1,35 @@
 ﻿
 <header class="mat-elevation-z6">
+
     <md-card>
-        <nav md-tab-nav-bar>
-            <a md-tab-link
-               md-ripple 
-               *ngFor="let link of links"
-               [routerLink]="link"
-               routerLinkActive #rla="routerLinkActive"
-               [active]="rla.isActive">
-                {{ capitalizeLink(link) }}
-            </a>
-        </nav>
+        <div class="flex-container flex-wrapped"
+             fxLayout="row"
+             fxLayoutAlign="start center"
+             fxLayout.xs="column"
+             fxLayoutAlign.xs="start">
+
+            <nav md-tab-nav-bar class="flex-item" fxFlex="80%" fxFlex.xs="100%">
+                <a md-tab-link
+                   md-ripple
+                   *ngFor="let link of links"
+                   [routerLink]="link"
+                   routerLinkActive #rla="routerLinkActive"
+                   [active]="rla.isActive">
+                    {{ capitalizeLink(link) }}
+                </a>
+            </nav>
+
+            <div class="flex-item" fxFlex="20%" fxFlex.xs="100%">
+                <button md-raised-button
+                        color="primary"
+                        style="float: right">
+                    <md-icon alt="dashboard">dashboard</md-icon>
+                    Login
+                </button>
+            </div>
+
+        </div>
+
     </md-card>
+
 </header>

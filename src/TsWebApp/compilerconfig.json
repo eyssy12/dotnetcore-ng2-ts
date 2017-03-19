@@ -30,5 +30,9 @@
   {
     "outputFile": "wwwroot/app/core/footer/footer.component.css",
     "inputFile": "wwwroot/app/core/footer/footer.component.less"
+  },
+  {
+    "outputFile": "wwwroot/app/home/home.component.css",
+    "inputFile": "wwwroot/app/home/home.component.less"
   }
 ]

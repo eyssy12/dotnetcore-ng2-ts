@@ -9,7 +9,7 @@
   flex-wrap: wrap;
 }
 md-card {
-  margin: 16px;
+  margin: 24px;
 }
 ::-webkit-scrollbar {
   width: 10px !important;

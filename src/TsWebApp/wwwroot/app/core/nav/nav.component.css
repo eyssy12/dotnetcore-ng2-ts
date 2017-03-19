@@ -9,3 +9,6 @@ header > md-card {
   margin: 0px;
   box-shadow: none;
 }
+header > md-card .flex-container {
+  width: 100%;
+}

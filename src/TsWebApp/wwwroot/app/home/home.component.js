@@ -13,13 +13,13 @@ var HomeComponent = (function () {
     function HomeComponent() {
     }
     HomeComponent.prototype.clicked = function (event) {
-        // window.alert('Clicked!');
     };
     HomeComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'app-home',
-            templateUrl: './home.component.html'
+            templateUrl: './home.component.html',
+            styleUrls: ['./home.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);
