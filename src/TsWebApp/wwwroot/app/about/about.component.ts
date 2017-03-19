@@ -13,7 +13,7 @@
 import { Observable } from 'rxjs/Observable';
 
 
-import { Person, PeopleService } from './../api/people.service';
+import { Person, AboutService } from './../services/about.service';
 import { SnackBarService } from './../core/snackbar.service'
 import { AppRoutes } from './../core/app-routing.module';
 
@@ -23,7 +23,7 @@ import { AppRoutes } from './../core/app-routing.module';
     templateUrl: './about.component.html',
     styleUrls: ['./about.component.min.css'],
     providers: [
-        PeopleService,
+        AboutService,
         SnackBarService
     ],
     animations: [
@@ -48,7 +48,7 @@ import { AppRoutes } from './../core/app-routing.module';
 
 export class AboutComponent implements OnInit, OnDestroy
 {
-    private personService: PeopleService;
+    private aboutService: AboutService;
     private snackBarService: SnackBarService;
     private friendlyNameRoutes: string[] = [];
 
@@ -56,9 +56,9 @@ export class AboutComponent implements OnInit, OnDestroy
     shibaCards: number = 1;
     shibaCardsArray: Array<any> = [1];
 
-    constructor(personService: PeopleService, snackBarService: SnackBarService)
+    constructor(personService: AboutService, snackBarService: SnackBarService)
     {
-        this.personService = personService;
+        this.aboutService = personService;
         this.snackBarService = snackBarService;
     }
 
@@ -77,14 +77,14 @@ export class AboutComponent implements OnInit, OnDestroy
     getPeople() {
         this.emptyPeopleArray();
 
-        this.personService
+        this.aboutService
             .getPeople()
             .subscribe(
-            people => {
-                this.people = people;
-                this.snackBarService.openSnackBar(this.people.length + ' People received.');
-            },
-            error => console.log(error));
+                people => {
+                    this.people = people;
+                    this.snackBarService.openSnackBar(this.people.length + ' People received.');
+                },
+                error => console.log(error));
     }
 
     clearPeople() {
@@ -98,6 +98,10 @@ export class AboutComponent implements OnInit, OnDestroy
 
     sliderChanged(event) {
         this.shibaCardsArray = new Array(this.shibaCards).fill(0);
+    }
+
+    likeShiba(id: number) {
+        this.aboutService.likeShiba(1, id);
     }
 
     private emptyPeopleArray() {

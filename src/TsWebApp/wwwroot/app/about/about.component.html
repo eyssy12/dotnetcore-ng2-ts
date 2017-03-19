@@ -13,7 +13,7 @@
         </md-card>
     </div>
 
-    <div *ngFor="let item of shibaCardsArray" class="flex-item" fxFlex="25%" fxFlex.xs="25%">
+    <div *ngFor="let item of shibaCardsArray; let id = index;" class="flex-item" fxFlex="25%" fxFlex.xs="25%">
         <md-card class="example-card" [@flyInOut]>
             <md-card-header>
                 <div md-card-avatar class="example-header-image"></div>
@@ -29,7 +29,7 @@
                 </p>
             </md-card-content>
             <md-card-actions>
-                <button md-button>LIKE</button>
+                <button md-button (click)="likeShiba(id)">LIKE</button>
                 <button md-button>SHARE</button>
             </md-card-actions>
         </md-card>

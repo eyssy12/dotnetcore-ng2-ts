@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var people_service_1 = require('./../api/people.service');
+var about_service_1 = require('./../services/about.service');
 var snackbar_service_1 = require('./../core/snackbar.service');
 var app_routing_module_1 = require('./../core/app-routing.module');
 var AboutComponent = (function () {
@@ -18,7 +18,7 @@ var AboutComponent = (function () {
         this.people = [];
         this.shibaCards = 1;
         this.shibaCardsArray = [1];
-        this.personService = personService;
+        this.aboutService = personService;
         this.snackBarService = snackBarService;
     }
     AboutComponent.prototype.ngOnInit = function () {
@@ -34,7 +34,7 @@ var AboutComponent = (function () {
     AboutComponent.prototype.getPeople = function () {
         var _this = this;
         this.emptyPeopleArray();
-        this.personService
+        this.aboutService
             .getPeople()
             .subscribe(function (people) {
             _this.people = people;
@@ -51,6 +51,9 @@ var AboutComponent = (function () {
     AboutComponent.prototype.sliderChanged = function (event) {
         this.shibaCardsArray = new Array(this.shibaCards).fill(0);
     };
+    AboutComponent.prototype.likeShiba = function (id) {
+        this.aboutService.likeShiba(1, id);
+    };
     AboutComponent.prototype.emptyPeopleArray = function () {
         this.people = [];
     };
@@ -61,7 +64,7 @@ var AboutComponent = (function () {
             templateUrl: './about.component.html',
             styleUrls: ['./about.component.min.css'],
             providers: [
-                people_service_1.PeopleService,
+                about_service_1.AboutService,
                 snackbar_service_1.SnackBarService
             ],
             animations: [
@@ -83,7 +86,7 @@ var AboutComponent = (function () {
                 ])
             ]
         }), 
-        __metadata('design:paramtypes', [people_service_1.PeopleService, snackbar_service_1.SnackBarService])
+        __metadata('design:paramtypes', [about_service_1.AboutService, snackbar_service_1.SnackBarService])
     ], AboutComponent);
     return AboutComponent;
 }());

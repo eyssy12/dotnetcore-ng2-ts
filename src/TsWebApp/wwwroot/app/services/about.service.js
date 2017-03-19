@@ -12,37 +12,56 @@ var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 var Observable_1 = require('rxjs/Observable');
 var Person = (function () {
-    function Person(id, guid, firstName, lastName, date) {
+    function Person(id, guid, firstName, lastName, dateOfBirth) {
         this.id = id;
         this.guid = guid;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.date = date;
+        this.dateOfBirth = dateOfBirth;
         this.fullName = this.firstName + " " + this.lastName;
     }
     return Person;
 }());
 exports.Person = Person;
-var PeopleService = (function () {
-    function PeopleService(http) {
+var AboutService = (function () {
+    function AboutService(http) {
         this.http = http;
+        this.headers = new http_1.Headers();
+        this.headers.append('Content-Type', 'application/json');
+        this.putRequestOptions = new http_1.RequestOptions({ headers: this.headers });
     }
-    PeopleService.prototype.getPeople = function () {
+    AboutService.prototype.getPeople = function () {
         return this.http
-            .get('app/api/people.json')
-            .map(function (response) { return response.json(); })
+            .get('/about/getpeople')
+            .map(function (response) {
+            return response.json();
+        })
             .catch(this.handleError);
     };
-    PeopleService.prototype.handleError = function (error) {
+    AboutService.prototype.likeShiba = function (requester, resourceId) {
+        //let body = new FormData();
+        //body.append('requester', requester);
+        //body.append('resourceId', resourceId);
+        //body.append('context', 'shiba');
+        var body = JSON.stringify({ Requester: requester, ResourceId: resourceId, Context: 'shiba' });
+        this.http
+            .put('/about/likeshiba', body, this.putRequestOptions)
+            .map(function (response) {
+            console.log('Shiba put repsonse: ' + response.statusText);
+        })
+            .catch(this.handleError)
+            .subscribe(); // Observables are lazy and to enforce execution, we need to subscribe to it
+    };
+    AboutService.prototype.handleError = function (error) {
         console.error(error);
         var msg = "Error status code " + error.status + " at " + error.url;
         return Observable_1.Observable.throw(msg);
     };
-    PeopleService = __decorate([
+    AboutService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], PeopleService);
-    return PeopleService;
+    ], AboutService);
+    return AboutService;
 }());
-exports.PeopleService = PeopleService;
-//# sourceMappingURL=people.service.js.map
+exports.AboutService = AboutService;
+//# sourceMappingURL=about.service.js.map

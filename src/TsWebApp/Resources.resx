@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Data_People" xml:space="preserve">
+    <value>[
+  {
+    "guid": "ce521f9c-a504-4fd1-8213-e26010b99377",
+    "id": 0,
+    "firstName": "Helen",
+    "lastName": "Pena"
+  },
+  {
+    "guid": "cec9f84c-00f6-4a3f-b35f-c97400498107",
+    "id": 1,
+    "firstName": "Fay",
+    "lastName": "French"
+  },
+  {
+    "guid": "da75aa6f-3179-4feb-9761-a5cbae9347cc",
+    "id": 2,
+    "firstName": "Branch",
+    "lastName": "Madden"
+  },
+  {
+    "guid": "ca9c87d4-0221-4a9e-bbda-b60c1f105e1a",
+    "id": 3,
+    "firstName": "Kennedy",
+    "lastName": "Brock"
+  },
+  {
+    "guid": "2e1197f0-fa97-435a-9597-d29e61700fee",
+    "id": 4,
+    "firstName": "Cooke",
+    "lastName": "Harper"
+  },
+  {
+    "guid": "0c6e26df-f58c-4361-a937-c7f7dd35c07b",
+    "id": 5,
+    "firstName": "Tracy",
+    "lastName": "Mcgee"
+  },
+  {
+    "guid": "5cc57376-58b7-452b-933b-662e2fe6edd6",
+    "id": 6,
+    "firstName": "Bettye",
+    "lastName": "Emerson"
+  },
+  {
+    "guid": "26bb2326-d902-417a-9fc8-553668bfa293",
+    "id": 7,
+    "firstName": "Lowery",
+    "lastName": "Contreras"
+  },
+  {
+    "guid": "60235e58-0cac-4974-8e6c-bfd60af5021d",
+    "id": 8,
+    "firstName": "Lilly",
+    "lastName": "Wolfe"
+  },
+  {
+    "guid": "ee18e067-526c-45f5-9bf6-e60db0d31fcd",
+    "id": 9,
+    "firstName": "Wendi",
+    "lastName": "Moon"
+  },
+  {
+    "guid": "85de8e59-ebcd-414c-aae2-1faf01246d76",
+    "id": 10,
+    "firstName": "Rosanne",
+    "lastName": "Mayo"
+  },
+  {
+    "guid": "0a850f1a-e44a-4409-a83b-209362c05ac3",
+    "id": 11,
+    "firstName": "Jennifer",
+    "lastName": "Wells"
+  },
+  {
+    "guid": "02e02c65-00ad-4b81-89b5-ffa35dc839ec",
+    "id": 12,
+    "firstName": "Harrell",
+    "lastName": "Mack"
+  },
+  {
+    "guid": "86b9cc02-ba30-443f-9748-faa26d56b904",
+    "id": 13,
+    "firstName": "Santana",
+    "lastName": "Blair"
+  },
+  {
+    "guid": "c6e5d855-2a51-43a6-a423-1fee19dc1115",
+    "id": 14,
+    "firstName": "Maria",
+    "lastName": "Myers"
+  },
+  {
+    "guid": "133e6d4f-50d9-4dba-bf2b-9133f4a2aa48",
+    "id": 15,
+    "firstName": "Alexander",
+    "lastName": "Watts"
+  },
+  {
+    "guid": "de8ff662-9b2b-4e3d-b8a5-f2476d59b290",
+    "id": 16,
+    "firstName": "Mollie",
+    "lastName": "Hensley"
+  },
+  {
+    "guid": "d007c824-6b6b-40f2-82bb-813f241bc5e2",
+    "id": 17,
+    "firstName": "Valarie",
+    "lastName": "Marshall"
+  },
+  {
+    "guid": "a1c29c31-5887-4fa4-99d6-558126d25576",
+    "id": 18,
+    "firstName": "Evelyn",
+    "lastName": "Vance"
+  },
+  {
+    "guid": "31dfb8bf-b2af-4126-8b81-33cf5154c9a9",
+    "id": 19,
+    "firstName": "Rush",
+    "lastName": "Norris"
+  }
+]</value>
+  </data>
+</root>
