@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var about_service_1 = require('./../services/about.service');
 var snackbar_service_1 = require('./../core/snackbar.service');
 var app_routing_module_1 = require('./../core/app-routing.module');
+var animations_1 = require('./../core/animations');
 var AboutComponent = (function () {
     function AboutComponent(personService, snackBarService) {
         this.friendlyNameRoutes = [];
@@ -67,24 +68,7 @@ var AboutComponent = (function () {
                 about_service_1.AboutService,
                 snackbar_service_1.SnackBarService
             ],
-            animations: [
-                core_1.trigger('flyInOut', [
-                    core_1.state('in', core_1.style({ opacity: 1, transform: 'translateX(0)' })),
-                    core_1.transition('void => *', [
-                        core_1.style({
-                            opacity: 0,
-                            transform: 'translateX(-100%)'
-                        }),
-                        core_1.animate('0.2s ease-in')
-                    ]),
-                    core_1.transition('* => void', [
-                        core_1.animate('0.2s 10 ease-out', core_1.style({
-                            opacity: 0,
-                            transform: 'translateX(100%)'
-                        }))
-                    ])
-                ])
-            ]
+            animations: [animations_1.easeIn, animations_1.flyInOut]
         }), 
         __metadata('design:paramtypes', [about_service_1.AboutService, snackbar_service_1.SnackBarService])
     ], AboutComponent);

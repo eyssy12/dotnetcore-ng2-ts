@@ -39,10 +39,6 @@ var AboutService = (function () {
             .catch(this.handleError);
     };
     AboutService.prototype.likeShiba = function (requester, resourceId) {
-        //let body = new FormData();
-        //body.append('requester', requester);
-        //body.append('resourceId', resourceId);
-        //body.append('context', 'shiba');
         var body = JSON.stringify({ Requester: requester, ResourceId: resourceId, Context: 'shiba' });
         this.http
             .put('/about/likeshiba', body, this.putRequestOptions)

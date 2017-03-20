@@ -45,11 +45,6 @@ export class AboutService
 
     likeShiba(requester: number, resourceId: number): void {
 
-        //let body = new FormData();
-        //body.append('requester', requester);
-        //body.append('resourceId', resourceId);
-        //body.append('context', 'shiba');
-
         let body = JSON.stringify({ Requester: requester, ResourceId: resourceId, Context: 'shiba' });
 
         this.http

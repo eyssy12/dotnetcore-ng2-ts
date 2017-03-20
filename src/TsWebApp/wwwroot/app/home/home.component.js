@@ -9,8 +9,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var material_1 = require('@angular/material');
+var animations_1 = require('./../core/animations');
 var HomeComponent = (function () {
-    function HomeComponent() {
+    function HomeComponent(dialog) {
+        this.dialog = dialog;
+        this.folders = [
+            {
+                name: 'Photos',
+                updated: new Date('1/1/16'),
+            },
+            {
+                name: 'Recipes',
+                updated: new Date('1/17/16'),
+            },
+            {
+                name: 'Work',
+                updated: new Date('1/28/16'),
+            }
+        ];
+        this.notes = [
+            {
+                name: 'Vacation Itinerary',
+                updated: new Date('2/20/16'),
+            },
+            {
+                name: 'Kitchen Remodel',
+                updated: new Date('1/18/16'),
+            }
+        ];
     }
     HomeComponent.prototype.clicked = function (event) {
     };
@@ -19,9 +46,10 @@ var HomeComponent = (function () {
             moduleId: module.id,
             selector: 'app-home',
             templateUrl: './home.component.html',
-            styleUrls: ['./home.component.css']
+            styleUrls: ['./home.component.css'],
+            animations: [animations_1.easeIn]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [material_1.MdDialog])
     ], HomeComponent);
     return HomeComponent;
 }());

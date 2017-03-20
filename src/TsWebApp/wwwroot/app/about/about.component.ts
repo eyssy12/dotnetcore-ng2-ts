@@ -3,19 +3,15 @@
     Component,
     OnDestroy,
     OnInit,
-    trigger,
-    state,
-    style,
-    transition,
-    animate
 } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
 
-
 import { Person, AboutService } from './../services/about.service';
 import { SnackBarService } from './../core/snackbar.service'
 import { AppRoutes } from './../core/app-routing.module';
+
+import { easeIn, flyInOut } from './../core/animations';
 
 @Component({
     moduleId: module.id,
@@ -26,24 +22,7 @@ import { AppRoutes } from './../core/app-routing.module';
         AboutService,
         SnackBarService
     ],
-    animations: [
-        trigger('flyInOut', [
-            state('in', style({ opacity: 1, transform: 'translateX(0)' })),
-            transition('void => *', [
-                style({
-                    opacity: 0,
-                    transform: 'translateX(-100%)'
-                }),
-                animate('0.2s ease-in')
-            ]),
-            transition('* => void', [
-                animate('0.2s 10 ease-out', style({
-                    opacity: 0,
-                    transform: 'translateX(100%)'
-                }))
-            ])
-        ])
-    ]
+    animations: [easeIn, flyInOut]
 })
 
 export class AboutComponent implements OnInit, OnDestroy
