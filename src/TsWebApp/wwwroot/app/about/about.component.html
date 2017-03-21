@@ -1,62 +1,40 @@
-﻿<div class="flex-container inner-flex-container flex-wrapped"
-     fxLayout="row"
-     fxLayout.xs="column"
-     fxLayoutAlign="center"
-     fxLayoutAlign.xs="start">
-
-    <div fxFlex="100%" class="flex-item" [@easeIn]>
-        <md-card>
-            <md-slider min="0" max="10" step="1" thumb-level="true" tick-interval="1" [(ngModel)]="shibaCards" (ngModelChange)='sliderChanged($event)'></md-slider>
-            <p>
-                Shibas: {{ shibaCards }}
-            </p>
-        </md-card>
-    </div>
-
-    <div *ngFor="let item of shibaCardsArray; let id = index;" class="flex-item" fxFlex="25%" fxFlex.xs="25%">
-        <md-card class="example-card" [@flyInOut]>
-            <md-card-header>
-                <div md-card-avatar class="example-header-image"></div>
-                <md-card-title>Shiba Inu</md-card-title>
-                <md-card-subtitle>Dog Breed</md-card-subtitle>
-            </md-card-header>
-            <img md-card-image src="../../assets/img/shiba1.jpg">
-            <md-card-content>
+﻿<div class="container">
+    <div class="row" [@easeIn]>
+        <div class="column">
+            <md-card>
+                <md-slider min="0" max="10" step="1" thumb-level="true" tick-interval="1" [(ngModel)]="shibaCards" (ngModelChange)='sliderChanged($event)'></md-slider>
                 <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
+                    Shibas: {{ shibaCards }}
                 </p>
-            </md-card-content>
-            <md-card-actions>
-                <button md-button (click)="likeShiba(id)">LIKE</button>
-                <button md-button>SHARE</button>
-            </md-card-actions>
-        </md-card>
-    </div>
-
-    <md-card fxFlex="100%" fxFlex.xs="100%" class="flex-item" [@easeIn]> 
-
-        <div class="flex-container flex-wrapped"
-             fxLayout="row"
-             fxLayout.xs="row"
-             fxLayoutAlign="space-around center"
-             fxLayoutAlign.xs="space-around center">
-            <h3 class="flex-item" fxFlex="100%">
-                Routes from Routing Module:
-            </h3>
-            <p class="flex-item" fxFlex="5%" *ngFor="let friendlyRoute of getFriendlyNameRoutes()">
-                {{ friendlyRoute }}
-            </p>
+            </md-card>
         </div>
-
-        <div class="flex-container flex-wrapped"
-             fxLayout="row"
-             fxLayout.xs="row"
-             fxLayoutAlign="start"
-             fxLayoutAlign.xs="start">
-
-            <div class="flex-item buttons" fxFlex="100%">
+    </div>
+    <div class="row row-3" [@easeIn]>
+        <div class="column column-30" *ngFor="let item of shibaCardsArray; let id = index;">
+            <md-card [@flyInOut]>
+                <md-card-header>
+                    <div md-card-avatar class="example-header-image"></div>
+                    <md-card-title>Shiba Inu - {{ id + 1 }}</md-card-title>
+                    <md-card-subtitle>Dog Breed</md-card-subtitle>
+                </md-card-header>
+                <img md-card-image src="../../assets/img/shiba1.jpg">
+                <md-card-content>
+                    <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                    </p>
+                </md-card-content>
+                <md-card-actions>
+                    <button md-button (click)="likeShiba(id)">LIKE</button>
+                    <button md-button>SHARE</button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+    <div class="row" [@easeIn]>
+        <div class="column">
+            <div class="buttons">
                 <button md-raised-button
                         (click)="getPeople()"
                         color="primary">
@@ -71,30 +49,14 @@
             </div>
 
             <div *ngIf="people.length > 0"
-                 fxFlex="100%"
-                 class="flex-container flex-wrapped person-container"
-                 fxLayout="row"
-                 fxLayout.xs="column"
-                 fxLayoutAlign="start"
-                 fxLayoutAlign.xs="start">
-                <h3 class="flex-item" fxFlex="100%">
+                 class="person-container">
+                <h3>
                     People loaded:
                 </h3>
-                <p class="flex-item person-item" *ngFor="let person of people; let i = index;">
+                <p class="person-item" *ngFor="let person of people; let i = index;">
                     {{ person.firstName }} {{ person.lastName }}
                 </p>
             </div>
         </div>
-
-
-
-        <!--<p class="flex-item" fxFlex="100%">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel hendrerit augue, eu efficitur nunc. In ultricies ornare velit nec tincidunt. Nulla placerat hendrerit tristique. Phasellus vehicula elit et placerat varius. Integer porta, mi non molestie consectetur, odio ex feugiat est, vel vulputate tortor dolor id nunc. Donec pellentesque pharetra libero quis commodo. Quisque mollis pretium tortor molestie facilisis. Donec nulla erat, interdum ornare erat vestibulum, eleifend mattis neque. Donec et interdum ligula. Morbi in viverra velit, et dictum nisl. Phasellus elementum at enim ut imperdiet. Curabitur hendrerit rhoncus felis, quis congue ex consequat ornare.
-
-            Phasellus risus ante, malesuada sit amet cursus eu, lacinia ac erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur viverra posuere ante a lacinia. Vestibulum eu velit sed lorem hendrerit volutpat ut vitae justo. Aliquam erat volutpat. Ut a magna egestas, cursus neque at, iaculis sem. Aenean at placerat libero.
-
-            Quisque porttitor urna in diam sollicitudin, ut mollis quam suscipit. Fusce consequat auctor lacus, nec sodales neque varius nec. Donec auctor dignissim hendrerit. Nullam finibus tellus et eros porttitor blandit. Praesent ut ornare turpis. Sed et nisl ut augue pellentesque facilisis. Integer varius non massa at finibus. Mauris placerat, nisi vel imperdiet varius, urna lorem gravida quam, vel feugiat nulla magna eu est. Suspendisse accumsan eu justo vel maximus. Etiam tempus nec mauris sit amet feugiat. Integer viverra ac ex ac tincidunt. Nunc malesuada lacus ac tortor luctus, fermentum efficitur diam placerat. Phasellus ac lacinia arcu. Suspendisse eu felis sit amet ante auctor tempus eu in dui. Vestibulum at varius tortor. Fusce aliquet mi id mollis iaculis.
-        </p>-->
-    </md-card>
+    </div>
 </div>
-

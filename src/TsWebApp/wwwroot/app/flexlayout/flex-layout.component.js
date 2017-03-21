@@ -11,8 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var FlexLayoutComponent = (function () {
     function FlexLayoutComponent() {
-        this.calc2Cols = "2 2 calc(10em + 10px);"; /** 10px is the missing margin of the missing box */
-        this.calc3Cols = "3 3 calc(15em + 20px)"; /** 20px is the missing margin of the two missing boxes */
     }
     FlexLayoutComponent = __decorate([
         core_1.Component({
