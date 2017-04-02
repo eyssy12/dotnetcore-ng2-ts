@@ -5,8 +5,7 @@ main {
   display: flex;
   flex-direction: column;
   padding-top: 98px;
-  height: calc(100% - 98px);
-  /*using ~ less ignores the transformation here*/
+  height: 100%;
 }
 .main-content {
   height: 100%;
