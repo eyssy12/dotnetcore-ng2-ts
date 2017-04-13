@@ -14,23 +14,11 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var material_1 = require('@angular/material');
 var flex_layout_1 = require("@angular/flex-layout");
-var ng2_signalr_1 = require('ng2-signalr');
-var ng2_signalr_2 = require('ng2-signalr');
 var app_component_1 = require('./app.component');
 var nav_component_1 = require('./core/nav/nav.component');
 var footer_component_1 = require('./core/footer/footer.component');
 //Should be last in load order
 var app_routing_module_1 = require('./core/app-routing.module');
-// v2.0.0
-function createConfig() {
-    var config = new ng2_signalr_2.SignalRConfiguration();
-    config.hubName = 'ChatHub';
-    config.qs = { user: 'rob' };
-    config.url = 'http://localhost:55194/signalr';
-    config.logging = true;
-    return config;
-}
-exports.createConfig = createConfig;
 var AppModule = (function () {
     function AppModule() {
     }
@@ -39,7 +27,6 @@ var AppModule = (function () {
             imports: [
                 material_1.MaterialModule.forRoot(),
                 flex_layout_1.FlexLayoutModule.forRoot(),
-                ng2_signalr_1.SignalRModule.forRoot(createConfig),
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 app_routing_module_1.AppRoutingModule

@@ -1,5 +1,5 @@
 ﻿<div class="flex-main">
-    <div class="container-fluid">
+    <div class="container-fluid flexlayout-container">
         <div class="row">
             <div class="chat-area col-lg-offset-4 col-lg-4 col-sm-12 col-md-12">
 
@@ -18,5 +18,36 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-lg-12">
+                <md-menu #appMenu="mdMenu">
+                    <button md-menu-item> Settings </button>
+                    <button md-menu-item> Help </button>
+                </md-menu>
+
+                <button md-icon-button [mdMenuTriggerFor]="appMenu">
+                    <md-icon>more_vert</md-icon>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                Test 1
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                Test 2
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                Test 3 
+            </div>
+        </div>
     </div>
 </div>

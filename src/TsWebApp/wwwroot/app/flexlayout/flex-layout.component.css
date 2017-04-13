@@ -4,6 +4,15 @@
 .chat-area md-input-container {
   width: 100%;
 }
+.flexlayout-container div.row {
+  padding-bottom: 24px;
+}
+.flexlayout-container div.row div {
+  background-color: aquamarine;
+}
+.flexlayout-container div.row div:hover {
+  background-color: #00ff90;
+}
 .chat-text-area {
   resize: none;
   overflow: hidden;

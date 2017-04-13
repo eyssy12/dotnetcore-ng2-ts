@@ -15,23 +15,11 @@ import { FooterComponent } from './core/footer/footer.component';
 //Should be last in load order
 import { AppRoutingModule, routableComponents } from './core/app-routing.module';
 
-// v2.0.0
-export function createConfig(): SignalRConfiguration {
-    const config = new SignalRConfiguration();
-    config.hubName = 'ChatHub';
-    config.qs = { user: 'rob' };
-    config.url = 'http://localhost:55194/signalr';
-    config.logging = true;
-
-    return config;
-}
-
 @NgModule({
     imports:
     [
         MaterialModule.forRoot(),
         FlexLayoutModule.forRoot(),
-        SignalRModule.forRoot(createConfig),
         BrowserModule,
         FormsModule,
         AppRoutingModule

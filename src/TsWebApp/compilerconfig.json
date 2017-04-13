@@ -38,5 +38,9 @@
   {
     "outputFile": "wwwroot/assets/styles/vars.css",
     "inputFile": "wwwroot/assets/styles/vars.less"
+  },
+  {
+    "outputFile": "wwwroot/assets/styles/styles.css",
+    "inputFile": "wwwroot/assets/styles/styles.less"
   }
 ]

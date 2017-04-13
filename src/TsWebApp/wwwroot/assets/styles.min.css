@@ -1,4 +1,4 @@
-hr,img,legend{border:0}legend,td,th{padding:0}body,figure{margin:0}html{font-family:Roboto,"Helvetica Neue",sans-serif}.full-width{width:100%}.flex-wrapped{flex-wrap:wrap}md-card{margin:24px}::-webkit-scrollbar{width:10px!important;height:6px!important}::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.2)}::-webkit-scrollbar-track{background:rgba(255,255,255,.08)}/*!
+hr,img,legend{border:0}legend,td,th{padding:0}body,figure{margin:0}html{font-family:Roboto,"Helvetica Neue",sans-serif}.full-width{width:100%}.flex-wrapped{flex-wrap:wrap}md-card{margin:24px}::-webkit-scrollbar{background:rgba(255,255,255,.3);width:10px!important;height:6px!important}::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.25)}::-webkit-scrollbar-track{background:rgba(150,150,150,.35)}/*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)

@@ -12,6 +12,21 @@
     }
 }
 
+.flexlayout-container {
+    div {
+        &.row{
+            padding-bottom: 24px;
+
+            div {
+                background-color: aquamarine;
+                &:hover {
+                    background-color: #00ff90;
+                }
+            }
+        }
+    }
+}
+
 .chat-text-area {
     resize:none;
     overflow:hidden;

@@ -20,7 +20,6 @@
             '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
             '@angular/flex-layout': 'npm:@angular/flex-layout/bundles/flex-layout.umd.js',
             // other libraries
-            'ng2-signalr': 'npm:ng2-signalr/bundles/ng2-signalr.umd.js',
             'rxjs': 'npm:rxjs'
         },
         // packages tells the System loader how to load when no filename and/or no extension
@@ -30,9 +29,6 @@
                 defaultExtension: 'js'
             },
             rxjs: {
-                defaultExtension: 'js'
-            },
-            'ng2-signalr': {
                 defaultExtension: 'js'
             }
         }
