@@ -71,36 +71,11 @@ gulp.task('restore:bootstrap', function () {
     ]).pipe(gulp.dest(libs + 'bootstrap'));
 });
 
-gulp.task('restore:ng2signalr', function () {
-    gulp.src([
-        'node_modules/ng2-signalr/**/*.js'
-    ]).pipe(gulp.dest(libs + 'ng2-signalr'));
-});
-
-gulp.task('restore:signalr', function () {
-    gulp.src([
-        'node_modules/signalr/**/*.js'
-    ]).pipe(gulp.dest(libs + 'signalr'));
-});
-
-
 gulp.task('restore:jquery', function () {
     gulp.src([
         'node_modules/jquery/**/*.js'
     ]).pipe(gulp.dest(libs + 'jquery'));
 });
-
-//gulp.task('restore:es6shim', function () {
-//    gulp.src([
-//        'node_modules/es6-shim/**/*.js'
-//    ]).pipe(gulp.dest(libs + 'es6shim'));
-//});
-
-//gulp.task('restore:es6promise', function () {
-//    gulp.src([
-//        'node_modules/es6-promise/**/*.js'
-//    ]).pipe(gulp.dest(libs + 'es6promise'));
-//});
 
 gulp.task('styles', ['styles:del-min-css', 'styles:min-css']);
 
@@ -114,9 +89,5 @@ gulp.task('restore', [
     'restore:angular',
     'restore:bootstrap',
     'restore:jquery',
-    'restore:signalr',
-    'restore:ng2signalr',
-    //'restore:es6shim',
-    //'restore:es6promise',
     'styles:min-css'
 ]);

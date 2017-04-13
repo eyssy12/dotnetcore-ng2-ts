@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './../home/home.component';
 import { AboutComponent } from './../about/about.component';
 import { FlexLayoutComponent, } from './../flexlayout/flex-layout.component';
-import { ChatConnectionResolver } from './../flexlayout/chat.resolver';
 import { PageNotFoundComponent } from './../shared/page-not-found.component';
 
 const Home = 'home',
@@ -16,7 +15,7 @@ const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: NotFound, }, // path cannot start with a slash
     { path: Home, component: HomeComponent },
     { path: About, component: AboutComponent },
-    { path: Flex, component: FlexLayoutComponent, resolve: { connection: ChatConnectionResolver } },
+    { path: Flex, component: FlexLayoutComponent },
     { path: NotFound, component: PageNotFoundComponent },
     { path: '**', pathMatch: 'full', redirectTo: NotFound },
 ];

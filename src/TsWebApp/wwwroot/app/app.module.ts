@@ -14,14 +14,13 @@ import { FooterComponent } from './core/footer/footer.component';
 
 //Should be last in load order
 import { AppRoutingModule, routableComponents } from './core/app-routing.module';
-import { ChatConnectionResolver } from './flexlayout/chat.resolver';
 
 // v2.0.0
 export function createConfig(): SignalRConfiguration {
     const config = new SignalRConfiguration();
     config.hubName = 'ChatHub';
     config.qs = { user: 'rob' };
-    config.url = 'http://localhost:55194/';
+    config.url = 'http://localhost:55194/signalr';
     config.logging = true;
 
     return config;
@@ -38,7 +37,7 @@ export function createConfig(): SignalRConfiguration {
         AppRoutingModule
     ],
     declarations: [AppComponent, NavComponent, FooterComponent, routableComponents],
-    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, ChatConnectionResolver],
+    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent]
 })
 

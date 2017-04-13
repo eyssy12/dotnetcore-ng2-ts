@@ -11,8 +11,7 @@
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
     "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
     "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
-    "Newtonsoft.Json": "8.0.2",
-    "Microsoft.AspNet.SignalR.Server": "3.0.0-*"
+    "Newtonsoft.Json": "8.0.2"
   },
 
   "commands": {

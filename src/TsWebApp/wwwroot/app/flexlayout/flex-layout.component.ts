@@ -1,7 +1,5 @@
 ﻿import { Component, ViewEncapsulation, Injectable } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Resolve } from '@angular/router';
-import { SignalR, SignalRConnection } from 'ng2-signalr';
 
 @Component({
     moduleId: module.id,
@@ -13,9 +11,6 @@ import { SignalR, SignalRConnection } from 'ng2-signalr';
 })
 
 export class FlexLayoutComponent {
-    private connection: SignalRConnection;
-
-    constructor(route: ActivatedRoute) {
-        this.connection = route.snapshot.data['connection'];
+    constructor() {
     }
 }
