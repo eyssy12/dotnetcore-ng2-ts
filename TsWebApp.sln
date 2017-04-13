@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{415A1A2F-F4E5-4D46-AF87-43033614696A}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		NuGet.Config = NuGet.Config
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TsWebApp", "src\TsWebApp\TsWebApp.xproj", "{B643414C-08DD-45A9-86DE-82A141DEFEF7}"

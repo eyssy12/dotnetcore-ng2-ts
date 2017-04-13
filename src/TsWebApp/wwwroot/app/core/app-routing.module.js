@@ -13,13 +13,14 @@ var router_1 = require('@angular/router');
 var home_component_1 = require('./../home/home.component');
 var about_component_1 = require('./../about/about.component');
 var flex_layout_component_1 = require('./../flexlayout/flex-layout.component');
+var chat_resolver_1 = require('./../flexlayout/chat.resolver');
 var page_not_found_component_1 = require('./../shared/page-not-found.component');
 var Home = 'home', About = 'about', Flex = 'flex', NotFound = '404';
 var routes = [
     { path: '', pathMatch: 'full', redirectTo: NotFound, },
     { path: Home, component: home_component_1.HomeComponent },
     { path: About, component: about_component_1.AboutComponent },
-    { path: Flex, component: flex_layout_component_1.FlexLayoutComponent },
+    { path: Flex, component: flex_layout_component_1.FlexLayoutComponent, resolve: { connection: chat_resolver_1.ChatConnectionResolver } },
     { path: NotFound, component: page_not_found_component_1.PageNotFoundComponent },
     { path: '**', pathMatch: 'full', redirectTo: NotFound },
 ];

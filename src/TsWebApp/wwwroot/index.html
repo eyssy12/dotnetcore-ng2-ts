@@ -1,4 +1,5 @@
-﻿<html>
+﻿<!DOCTYPE html> <!-- this is required because without it, lot of angular material design features will work in a weird fashion -->
+<html>
 <head>
     <base href="/"> <!-- This is required for Angulars routing engine -->
     <meta charset="UTF-8">
@@ -17,6 +18,8 @@
 
     <!-- 1. Load libraries -->
     <!-- ORDER MATTERS HERE-->
+    <script src="/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/libs/signalr/jquery.signalR.min.js"></script>
     <script src="/libs/core-js/core.js"></script>
     <script src="/libs/zone.js/zone.js"></script>
     <script src="/libs/reflect-metadata/reflect.js"></script>

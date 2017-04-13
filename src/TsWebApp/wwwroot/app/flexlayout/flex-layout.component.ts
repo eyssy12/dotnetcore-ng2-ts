@@ -1,4 +1,7 @@
-﻿import { Component, ViewEncapsulation } from '@angular/core';
+﻿import { Component, ViewEncapsulation, Injectable } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Resolve } from '@angular/router';
+import { SignalR, SignalRConnection } from 'ng2-signalr';
 
 @Component({
     moduleId: module.id,
@@ -10,6 +13,9 @@
 })
 
 export class FlexLayoutComponent {
-    calc2Cols = "2 2 calc(10em + 10px);";   /** 10px is the missing margin of the missing box */
-    calc3Cols = "3 3 calc(15em + 20px)";    /** 20px is the missing margin of the two missing boxes */
+    private connection: SignalRConnection;
+
+    constructor(route: ActivatedRoute) {
+        this.connection = route.snapshot.data['connection'];
+    }
 }

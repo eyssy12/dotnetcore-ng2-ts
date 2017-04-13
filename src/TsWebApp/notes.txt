@@ -33,3 +33,7 @@ TYPINGS
 typings.json has to be on the root of the application
 When added into the project, navigate to application in file explorer, open cmd and type "npm install typings -g"
 
+as well as that, sometimes the typings files under typings folder may complain that some code is missing meaning that other typings file are required
+
+e.g. for jQuery typings - typings install dt~jquery --global
+
